@@ -1,3 +1,54 @@
 .gif-div {
-	/*make inline*/
+	display: inline-block;
+	text-align: center;
+
+	padding: 15px;
+	margin: 10px;
+
+	border: 1px solid lightgrey;
+
+	background-color: white;
+
+	box-shadow: 5px 5px 5px lightgrey;
+
+}
+
+.panel {
+	background-color: rgba( 250, 250, 250, .6);
+}
+
+#main-panel {
+	text-align: center;
+}
+
+#button-bar {
+	margin-top: 15px;
+}
+
+#sidebar-panel {
+	text-align: right;
+}
+
+#add-button {
+	margin: 10px;
+	margin-right: 0px;
+}
+
+.gif-button {
+	margin: 10px;
+}
+
+body{
+	font-family: 'Short Stack', cursive;
+	font-weight: bold;
+	background-image: url(../images/background.png);
+}
+
+button {
+
+	box-shadow: 5px 5px 5px lightgrey;
+}
+
+#add-box {
+	box-shadow: 5px 5px 5px lightgrey;
 }

@@ -60,6 +60,10 @@ $(document).on("click", ".gif-button", function(){
 
 			//add rating below image
 
+			var currentRating = $('<h3>')
+			currentRating.text('Rating: ' +response.data[i].rating.toUpperCase());
+			currentImageDiv.append(currentRating);
+
 			// append to document
 
 			$('#main-panel').prepend(currentImageDiv);
@@ -102,6 +106,28 @@ $(document).on('click', '#add-button', function(){
 		
 	}
 
+});
+
+
+$(document).on('click', '.gif-div', function(){
+	//if state "still"
+	if ($(this).attr('data-state') === 'still'){
+
+		//change to animate
+		$(this).attr('data-state', 'animated');
+
+		//replace img with animate image
+		$(this).children().attr('src', $(this).attr('data-animated'))
+	}
+	//if state animate
+	else if ($(this).attr('data-state') === 'animated'){
+
+		//change to still
+		$(this).attr('data-state', 'still');
+
+		//replace img with still image
+		$(this).children().attr('src', $(this).attr('data-still'))
+	}
 });
 
 
